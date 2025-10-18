@@ -1,0 +1,117 @@
+.create-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 45px -20px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #1e293b;
+}
+
+.card-subtitle {
+  margin: 0.75rem 0 1.5rem;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.create-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.field-input {
+  border: 1px solid #cbd5f5;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #0f172a;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.primary-button {
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6366f1, #14b8a6);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.primary-button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.status-box {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background: #eef2ff;
+  color: #312e81;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-link {
+  color: #4c1d95;
+  font-weight: 600;
+}
+
+.helper-box {
+  margin-top: 1.75rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px dashed rgba(99, 102, 241, 0.4);
+  border-radius: 1rem;
+  background: rgba(248, 250, 252, 0.8);
+}
+
+.helper-box h3 {
+  margin: 0 0 0.75rem;
+  color: #1e293b;
+  font-size: 1.05rem;
+}
+
+.helper-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #475569;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .create-card {
+    padding: 1.5rem;
+  }
+}
