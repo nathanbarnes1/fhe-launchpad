@@ -1,11 +1,9 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
 import { sepolia } from 'wagmi/chains';
 
-const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || '';
-
 export const config = getDefaultConfig({
-  appName: 'Confidential Launchpad',
-  projectId,
+  appName: 'Confidential Token Launchpad',
+  projectId: 'confidential-token-launchpad',
   chains: [sepolia],
   ssr: false,
 });
