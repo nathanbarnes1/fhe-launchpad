@@ -1,6 +1,6 @@
 import type { Abi } from 'viem';
 
-export const CONFIDENTIAL_TOKEN_FACTORY_ADDRESS = '0x0ca8a0Bd407dDE82918e205e588B74C7E9F91A16';
+export const CONFIDENTIAL_TOKEN_FACTORY_ADDRESS = '0x83e43099eD9Fe1743Ca3D540bA005394410701AE';
 export const SEPOLIA_CHAIN_ID = 11155111;
 export const SEPOLIA_RPC_URL = 'https://ethereum-sepolia-rpc.publicnode.com';
 

@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: BSD-3-Clause-Clear
 pragma solidity ^0.8.27;
 
-import {ConfidentialFungibleToken} from "new-confidential-contracts/token/ConfidentialFungibleToken.sol";
-import {SepoliaConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
+import {ERC7984} from "confidential-contracts-v91/contracts/token/ERC7984/ERC7984.sol";
+import {ZamaEthereumConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
 import {FHE, euint64} from "@fhevm/solidity/lib/FHE.sol";
 
-contract LaunchpadConfidentialToken is ConfidentialFungibleToken, SepoliaConfig {
+contract LaunchpadConfidentialToken is ERC7984, ZamaEthereumConfig {
     uint64 public constant FREE_MINT_BASE_UNITS = 10_000_000;
     address public immutable creator;
 
     event FreeMint(address indexed minter, euint64 amount);
 
     constructor(string memory tokenName, string memory tokenSymbol, address creatorAddress)
-        ConfidentialFungibleToken(tokenName, tokenSymbol, "")
+        ERC7984(tokenName, tokenSymbol, "")
     {
         creator = creatorAddress;
     }
@@ -28,7 +28,7 @@ contract LaunchpadConfidentialToken is ConfidentialFungibleToken, SepoliaConfig 
     }
 }
 
-contract ConfidentialTokenFactory is SepoliaConfig {
+contract ConfidentialTokenFactory is ZamaEthereumConfig {
     struct TokenRecord {
         address token;
         address creator;
